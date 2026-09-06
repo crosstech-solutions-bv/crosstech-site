@@ -64,7 +64,9 @@ website/
     ├── css/style.css      THE stylesheet — design tokens at top, dark theme only
     ├── js/main.js         Vanilla UI: header scroll state, mobile nav, scroll reveal, footer year
     ├── contactform/contactform.js   Vanilla validation + Firestore write
-    └── img/favicon.png    Only image on the site (design is pure CSS)
+    ├── img/favicon.png    + img/swing-mcp/ (icon, screenshots, video posters)
+    └── video/             swing-mcp-install-and-use.mp4 (2:52 tutorial), swing-mcp-short.mp4 (41 s vertical),
+                           swing-mcp-demo-loop.mp4 (silent hero loop). Source + pipeline: ../marketing/video/
 ```
 
 ## Conventions
@@ -81,6 +83,10 @@ website/
   emoji in `.card .icon` — no icon font.
 - Scroll-in animation = add class `reveal`; `js/main.js` handles the rest
   (with reduced-motion fallback).
+- Video: plain `<video>` tags, no player library. `/swing-mcp#video` is the only page with a
+  playable video (chapter buttons seek via inline script); the hero uses a muted autoplay loop.
+  `/video/**` and `/img/**` are cached one week (firebase.json) — bump the file name to replace a
+  video, don't overwrite in place.
 
 ## How to run / deploy
 
