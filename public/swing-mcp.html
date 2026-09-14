@@ -3,24 +3,24 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Swing MCP — AI hands for Java Swing desktop apps | CrossTech</title>
-    <meta name="description" content="Swing MCP is an open-source MCP server that lets Claude and other AI assistants operate Java Swing desktop applications: see the UI as a component tree, click, fill forms, read tables, handle dialogs. No API, no rewrite. Install in Claude Desktop in two minutes.">
+    <title>Swing MCP — AI hands for Java desktop apps, Swing and JavaFX | CrossTech</title>
+    <meta name="description" content="Swing MCP is an open-source MCP server that lets Claude and other AI assistants operate Java desktop applications, Swing and JavaFX: see the UI as a component tree, click, fill forms, read tables, handle dialogs. No API, no rewrite. Install in Claude Desktop in two minutes.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/img/favicon.png">
     <link href="/css/style.css" rel="stylesheet">
     <link rel="canonical" href="https://crosstech.solutions/swing-mcp">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="CrossTech">
-    <meta property="og:title" content="Swing MCP — AI hands for Java Swing desktop apps">
-    <meta property="og:description" content="Open-source MCP server: Claude sees your Swing app's UI as a component tree, clicks, fills forms, reads tables, handles dialogs. No API, no rewrite.">
+    <meta property="og:title" content="Swing MCP — AI hands for Java desktop apps, Swing and JavaFX">
+    <meta property="og:description" content="Open-source MCP server: Claude sees your Swing or JavaFX app's UI as a component tree, clicks, fills forms, reads tables, handles dialogs. No API, no rewrite.">
     <meta property="og:url" content="https://crosstech.solutions/swing-mcp">
     <meta property="og:image" content="https://crosstech.solutions/img/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@CrossTechSol">
-    <meta name="twitter:title" content="Swing MCP — AI hands for Java Swing desktop apps">
-    <meta name="twitter:description" content="Open-source MCP server: Claude sees your Swing app's UI as a component tree, clicks, fills forms, reads tables, handles dialogs. No API, no rewrite.">
+    <meta name="twitter:title" content="Swing MCP — AI hands for Java desktop apps, Swing and JavaFX">
+    <meta name="twitter:description" content="Open-source MCP server: Claude sees your Swing or JavaFX app's UI as a component tree, clicks, fills forms, reads tables, handles dialogs. No API, no rewrite.">
     <meta name="twitter:image" content="https://crosstech.solutions/img/og-image.png">
     <meta property="og:video" content="https://crosstech.solutions/video/swing-mcp-install-and-use.mp4">
     <meta property="og:video:secure_url" content="https://crosstech.solutions/video/swing-mcp-install-and-use.mp4">
@@ -41,7 +41,7 @@
       "downloadUrl": "https://github.com/crosstech-solutions-bv/swing-mcp/releases/latest",
       "codeRepository": "https://github.com/crosstech-solutions-bv/swing-mcp",
       "image": "https://crosstech.solutions/img/swing-mcp-icon.png",
-      "description": "An open-source MCP server that lets AI assistants operate Java Swing desktop applications: snapshot the component tree, click, fill forms, read tables and trees, drive menus and dialogs.",
+      "description": "An open-source MCP server that lets AI assistants operate Java desktop applications, Swing and JavaFX: snapshot the component tree, click, fill forms, read tables and trees, drive menus and dialogs. One set of 39 tools drives either toolkit.",
       "author": { "@type": "Organization", "name": "CrossTech", "url": "https://crosstech.solutions" }
     }
     </script>
@@ -55,6 +55,20 @@
       "uploadDate": "2026-09-06",
       "duration": "PT2M52S",
       "contentUrl": "https://crosstech.solutions/video/swing-mcp-install-and-use.mp4",
+      "inLanguage": "en",
+      "publisher": { "@type": "Organization", "name": "CrossTech", "url": "https://crosstech.solutions" }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Swing MCP driving a JavaFX application",
+      "description": "The same 39 MCP tools drive a JavaFX app: launch, fill a form, read a TableView, pick from a ListView and TreeView, handle a modal Alert. Every tool call shown comes from the real MCP log of the session.",
+      "thumbnailUrl": "https://crosstech.solutions/img/swing-mcp/poster-javafx.jpg",
+      "uploadDate": "2026-09-14",
+      "duration": "PT1M36S",
+      "contentUrl": "https://crosstech.solutions/video/swing-mcp-javafx.mp4",
       "inLanguage": "en",
       "publisher": { "@type": "Organization", "name": "CrossTech", "url": "https://crosstech.solutions" }
     }
@@ -135,8 +149,8 @@
             <div class="container sm-hero">
                 <div>
                     <span class="eyebrow">Open source &middot; MIT &middot; Java 21+</span>
-                    <h1>Swing MCP: <span class="grad-text">AI hands</span> for Java Swing desktop apps.</h1>
-                    <p>An MCP server that lets Claude and other AI assistants operate any Java Swing application:
+                    <h1>Swing MCP: <span class="grad-text">AI hands</span> for Java desktop apps &mdash; Swing and JavaFX.</h1>
+                    <p>An MCP server that lets Claude and other AI assistants operate any Java Swing or JavaFX application:
                         see the UI as a component tree, click, type, fill forms, read tables and trees, drive menus
                         and dialogs. No API. No rewrite. The app never knows.</p>
                     <div class="actions">
@@ -157,7 +171,9 @@
             <div class="container">
                 <h2 class="section-title reveal">What the assistant can do once it's inside.</h2>
                 <p class="section-lead reveal">The agent loads into the app's JVM and exposes 39 tools over MCP. Everything
-                    runs on the Swing event thread, so it behaves like a very fast, very patient user.</p>
+                    runs on the toolkit's own UI thread &mdash; the Swing event thread or the JavaFX Application Thread
+                    &mdash; so it behaves like a very fast, very patient user. An app that mixes both works too; you
+                    never have to say which it is.</p>
                 <div class="grid cols-3">
                     <article class="card reveal">
                         <div class="icon" aria-hidden="true">&#128065;&#65039;</div>
@@ -170,13 +186,14 @@
                         <div class="icon" aria-hidden="true">&#128433;&#65039;</div>
                         <h3>Act in it</h3>
                         <p>Click, hover, focus, type, fill text fields and spinners, pick combo-box options, select
-                            table cells and tree nodes, drive menus and right-click menus, drag, scroll, press keys.</p>
+                            table cells and tree nodes, drive menus and right-click menus, scroll, press keys, drag
+                            (Swing).</p>
                     </article>
                     <article class="card reveal">
                         <div class="icon" aria-hidden="true">&#128202;</div>
                         <h3>Read data out</h3>
-                        <p>Whole <code>JTable</code> contents as structured data, list and tree items, component
-                            properties, the clipboard, and screenshots of a window or a single component.</p>
+                        <p>Whole table contents (<code>JTable</code> or <code>TableView</code>) as structured data, list and
+                            tree items, component properties, the clipboard, and screenshots of a window or a single component.</p>
                     </article>
                     <article class="card reveal">
                         <div class="icon" aria-hidden="true">&#128276;</div>
@@ -195,7 +212,9 @@
                         <h3>Locked down by default</h3>
                         <p>The agent listens on loopback only and requires a per-session token. Arbitrary code
                             execution in the target JVM (<code>evaluate_java</code>) is off unless you switch it on.
-                            Launched apps are closed when the server shuts down.</p>
+                            Launched apps are closed when the server shuts down. Every tool declares whether it is
+                            read-only or destructive (MCP tool annotations), so a client that honours them can wave
+                            reads through and ask before <code>stop_app</code> or <code>close_window</code>.</p>
                     </article>
                 </div>
             </div>
@@ -226,6 +245,26 @@
             </div>
         </section>
 
+
+        <section class="section" id="javafx">
+            <div class="container">
+                <span class="eyebrow reveal">JavaFX</span>
+                <h2 class="section-title reveal">Same tools, <span class="grad-text">JavaFX</span> app.</h2>
+                <p class="section-lead reveal">Since 1.3.0 the agent drives JavaFX as well as Swing, and you never say which.
+                    This is the JavaFX demo driven live through the real server: launch, form, table, list, tree, menu,
+                    modal dialog. Every tool call in the side panel comes from the MCP log of that session.</p>
+                <div class="sm-video reveal">
+                    <video controls preload="metadata" playsinline poster="/img/swing-mcp/poster-javafx.jpg" width="1920" height="1080">
+                        <source src="/video/swing-mcp-javafx.mp4" type="video/mp4">
+                        Your browser can't play this video. <a href="/video/swing-mcp-javafx.mp4">Download it</a> instead.
+                    </video>
+                </div>
+                <p class="sm-video-note">96 seconds, captions burned in. What is different underneath: a JavaFX control is a
+                    small scene-graph of its own (text, caret, selection); the snapshot reports it as one node, so the model
+                    sees what a user sees. Details in the
+                    <a href="https://github.com/crosstech-solutions-bv/swing-mcp/blob/main/docs/adr/0001-multi-toolkit-agent.md" target="_blank" rel="noopener">design note</a>.</p>
+            </div>
+        </section>
 
         <section class="section" id="clients">
             <div class="container">
@@ -440,13 +479,19 @@
                     <figure class="reveal"><img src="/img/swing-mcp/screenshot-table.png" width="622" height="525" alt="JTable row selected and read by Swing MCP" loading="lazy"><figcaption>Table cells selectable; table models extracted as structured data.</figcaption></figure>
                     <figure class="reveal"><img src="/img/swing-mcp/screenshot-dialog.png" width="622" height="525" alt="Modal About dialog detected by Swing MCP" loading="lazy"><figcaption>Modal dialogs detected and handled instead of blocking the session.</figcaption></figure>
                 </div>
+                <p class="section-lead reveal">And the same three operations on the JavaFX demo &mdash; same tools, same session, nothing to configure.</p>
+                <div class="sm-shots">
+                    <figure class="reveal"><img src="/img/swing-mcp/screenshot-fx-forms.png" width="720" height="608" alt="JavaFX form filled by Swing MCP: text field, password, combo box, spinner, check box, text area" loading="lazy"><figcaption>JavaFX controls filled through the same <code>fill</code> and <code>select_option</code> tools.</figcaption></figure>
+                    <figure class="reveal"><img src="/img/swing-mcp/screenshot-fx-table.png" width="720" height="608" alt="JavaFX TableView read as rows and columns by Swing MCP" loading="lazy"><figcaption>A JavaFX <code>TableView</code> comes back as rows and columns, not pixels.</figcaption></figure>
+                    <figure class="reveal"><img src="/img/swing-mcp/screenshot-fx-dialog.png" width="720" height="608" alt="JavaFX modal Alert detected by Swing MCP" loading="lazy"><figcaption>A JavaFX <code>Alert</code> is reported as pending, listed with its real text, and dismissed.</figcaption></figure>
+                </div>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
                 <span class="eyebrow reveal">Why we built it</span>
-                <h2 class="section-title reveal">A lot of business software is a Swing window with <span class="grad-text">no door</span>.</h2>
+                <h2 class="section-title reveal">A lot of business software is a Swing or JavaFX window with <span class="grad-text">no door</span>.</h2>
                 <p class="section-lead reveal">ERP clients, point-of-sale screens, lab and logistics tools, internal apps
                     written a decade ago: they work, nobody dares rewrite them, and they have no API. Swing MCP gives
                     that software a safe, permissioned door into the AI era, without changing the application.</p>
@@ -482,8 +527,11 @@
                     </details>
                     <details>
                         <summary>Does it work with JavaFX, SWT or Electron apps?</summary>
-                        <p>Not today: Swing only. If you run a different desktop stack, that is exactly the kind of
-                            connector we build for clients &mdash; see below.</p>
+                        <p>JavaFX: yes, since 1.3.0 &mdash; the same tools drive Swing, JavaFX, and apps that mix the
+                            two in one JVM. A JavaFX control comes back as one node, not its whole rendering sub-tree,
+                            so the model sees what a user sees. Two tools stay Swing-only, <code>drag</code> and
+                            <code>evaluate_java</code>, and say so if called on a JavaFX component. SWT and Electron: not today; if you run a different
+                            desktop stack, that is exactly the kind of connector we build for clients &mdash; see below.</p>
                     </details>
                     <details>
                         <summary>Which AI clients does it work with?</summary>
@@ -511,7 +559,7 @@
             <div class="container">
                 <div class="cta-band reveal">
                     <h2>Need it wired into your own application?</h2>
-                    <p>We connect AI assistants to the software businesses actually run &mdash; Swing, web apps, internal
+                    <p>We connect AI assistants to the software businesses actually run &mdash; Swing and JavaFX desktops, web apps, internal
                         tools, databases &mdash; with permissions, audit logs and the code handed over to you. Start with
                         a free 30-minute look at your systems; if a connector isn't worth it for you, we'll say so.</p>
                     <a class="btn btn-primary" href="/contact">Book a free audit</a>
